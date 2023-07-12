@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Byekan";
+  src: url("../fonts/BYekan-webfont.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------------------------------------------------------ */
+
+html,
+#root {
+  height: 100%;
+}
+
+body {
+  /* direction: rtl; */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/greenBG.jpg");
+  background-position: center center;
+  background-size: cover;
+  margin-top: 100px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+.customForm {
+  width: 500px;
+  height: 500px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 2px 0px 20px rgba(68, 47, 255, 0.212);
+  background-color: rgba(240, 248, 255, 0.671);
+  border: 1px solid rgba(68, 47, 255, 0.212);
+}
+
+.registerInputsDiv {
+  height: 300px;
+}
+
+.customRegisterLink {
+  width: 500px;
+  height: 100px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 2px 0px 20px rgba(68, 47, 255, 0.212);
+  background-color: rgba(240, 248, 255, 0.671);
+  border: 1px solid rgba(68, 47, 255, 0.212);
+  color: rgb(104, 104, 104);
+}
+
+.smallFont {
+  font-size: 12px;
+  color: red;
+}
+
+.formIcon {
+  width: 100px;
+}
