@@ -1,8 +1,13 @@
 import React from "react";
 import Form from "./components/Form";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
-  return <Form />;
+  return (
+    <BrowserRouter>
+      <Form />
+    </BrowserRouter>
+  );
 };
 
 export default App;

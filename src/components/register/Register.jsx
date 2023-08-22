@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { RegisterInputs } from "./RegisterInputs";
+import { NavLink } from "react-router-dom";
 
 export const Register = () => {
   return (
@@ -19,7 +20,12 @@ export const Register = () => {
       </div>
       <div className=" mt-1 customRegisterLink ">
         <div className="pointer h-100 d-flex justify-content-center align-items-center fs-4">
-          <AiOutlineArrowLeft /> Login
+          <NavLink
+            to={"/"}
+            className="text-decoration-none text-dark haver_switch"
+          >
+            <AiOutlineArrowLeft /> Login
+          </NavLink>
         </div>
       </div>
     </div>

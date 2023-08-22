@@ -13,12 +13,7 @@ export const validationSchema = Yup.object({
     .typeError("you must specify a number")
     .required("It is required"),
 
-  password: Yup.string()
-    .required("It is required")
-    .matches(
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{4,})/,
-      "For example: XPp1@c5"
-    ),
+  password: Yup.string().required("It is required"),
 
   c_password: Yup.string()
     .oneOf([Yup.ref("password"), null], "Passwords must match")
@@ -27,13 +22,14 @@ export const validationSchema = Yup.object({
 
 export const onSubmit = (values) => {
   // const result = { submit: "Done", value: { value } };
-  // console.log(result);
+  console.log("result");
 
   axios
     .post("http://authservice.azhadev.ir/api/auth/register", values)
     .then((res) => {
       console.log(res);
       console.log(values);
+      localStorage.getItem("token", JSON.stringify("token"));
       localStorage.setItem("savedData", JSON.stringify(values));
       if (res.status == 200) {
         localStorage.setItem("token", res.data.token);

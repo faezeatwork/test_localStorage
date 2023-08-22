@@ -1,9 +1,9 @@
 import React from "react";
 import { FormControl } from "../FormControl";
 import { Form, Formik } from "formik";
-import { initialValues, onSubmit, validationSchema } from "../formikAttribute";
 import axios from "axios";
 import { useState } from "react";
+import { initialValues, onSubmit, validationSchema } from "./registerAttribute";
 
 export const RegisterInputs = () => {
   const [data, setData] = useState({
@@ -17,12 +17,14 @@ export const RegisterInputs = () => {
       .get("http://authservice.azhadev.ir/api/auth/user", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
-      .then((res) => {
+      .then(() => {
         const savedData = JSON.parse(localStorage.getItem("savedData"));
         console.log(savedData);
         setData(savedData);
-      });
+      })
+      .catch();
   };
+
   return (
     <Formik
       initialValues={data || initialValues}

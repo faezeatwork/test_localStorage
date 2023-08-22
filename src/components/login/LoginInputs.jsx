@@ -1,8 +1,7 @@
 import { Form, Formik } from "formik";
 import React from "react";
 import { FormControl } from "../FormControl";
-
-import { initialValues, onSubmit, validationSchema } from "../formikAttribute";
+import { initialValues, onSubmit, validationSchema } from "./loginAttribute";
 
 export const LoginInputs = () => {
   return (
@@ -16,12 +15,13 @@ export const LoginInputs = () => {
         return (
           <Form>
             <FormControl
+              value="phone"
+              formik={formik}
               control="input"
-              type="email"
-              name="email"
-              placeholder="&#x2709; email ID"
-              iconStyle="Mail"
-              inputStyle="loginInputStyle"
+              type="text"
+              name="phone"
+              placeholder="phone"
+              inputStyle="registerInputStyle"
             />
             <FormControl
               control="input"
